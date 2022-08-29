@@ -1,0 +1,51 @@
+import 'dart:io';
+
+// function kembalian
+int luas_persegi(int panjang, int lebar){
+  return panjang * lebar;
+}
+
+
+// function tanpa kembalian
+void hallo(){
+  print("Hallo Selamat Datang di program belajar bahasa dart");
+}
+
+// function default menggunakan tanda [] = posisional parameter
+void pesan(String from, String to, String message, [String via = "Chatme"]){
+  print("Ada pesan dari : " + from);
+  print("Untuk : " + to);
+  print("Melalui : " + via);
+  print("=============| Isi Pesan |=============");
+  print(message);
+  print("=============| Isi Pesan |=============");
+}
+
+// function default menggunakan tanda {} = name parameter
+void pesan2(String from, String to, String message, {String via = "Chatme"}){
+  print("Ada pesan dari : " + from);
+  print("Untuk : " + to);
+  print("Melalui : " + via);
+  print("=============| Isi Pesan |=============");
+  print(message);
+  print("=============| Isi Pesan |=============");
+}
+
+// function one line atau one line function
+int jumlah(int a, int b) => a + b;
+
+void main(List<String> args) {
+  // int? a, b;
+
+  // a = int.tryParse(stdin.readLineSync()!);
+  // b = int.tryParse(stdin.readLineSync()!);
+
+  // hallo();
+  // print(luas_persegi(a!, b!));
+
+  pesan("kemal Ramadhan", "Ramadhan", "Hai");
+
+  pesan2("kemal", "sindi", "hai", via: "Line");
+
+  print(jumlah(10, 20));
+}
